@@ -1,5 +1,8 @@
-import { component$, Slot } from "@builder.io/qwik";
+import { component$, createContextId, Slot,useContextProvider,useStore } from "@builder.io/qwik";
 import type { RequestHandler } from "@builder.io/qwik-city";
+import { createContext } from "vm";
+import { Action } from "~/components/action/action";
+import { Header } from "~/components/header/header";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -11,7 +14,19 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
     maxAge: 5,
   });
 };
+type MyStateProps ={
+  openCart:boolean
+}
+export const MyState = createContextId<MyStateProps>('glavno')
 
 export default component$(() => {
-  return <Slot />;
+  const globalState = useStore({
+    openCart: false,
+  })
+  useContextProvider(MyState,globalState)
+  return <>
+    <Header />
+    <Action client:idle/>
+    <Slot />
+  </>;
 });
