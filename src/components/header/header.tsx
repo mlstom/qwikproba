@@ -1,4 +1,4 @@
-import { component$, $, useStore, useContext } from '@builder.io/qwik';
+import { component$, useStore, useContext } from '@builder.io/qwik';
 
 import Image from "~/images/logo-white-text.png"
 import { LinkComp } from './hovercomponents/linkComp';
