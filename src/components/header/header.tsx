@@ -31,14 +31,14 @@ export const Header = component$(() => {
         <div class="flex items-center space-x-4">
             <div class="text-white  flex items-center">
                 {state.openSearch && <input type='text' />}
-                <div class="hover:scale-90 cursor-pointer p-3" onClick$={()=>state.openSearch = !state.openSearch}><BsSearch font-size={32} /></div>
+                <div class="hover:scale-90 cursor-pointer p-3" onClick$={()=>state.openSearch = !state.openSearch}><BsSearch font-size={20} /></div>
             </div>
             <div  class="text-white relative p-3">
-            <div class="hover:scale-90 cursor-pointer " onClick$={()=>globalState.openCart = !globalState.openCart}><BsBag font-size={32} /></div>
+            <div class="hover:scale-90 cursor-pointer " onClick$={()=>globalState.openCart = !globalState.openCart}><BsBag font-size={20} /></div>
                 {cartItemsLength>0 &&  <span class="absolute top-0 right-0 bg-[#EE6D9F] rounded-full w-4 h-4 flex justify-center items-center p-2"><p>1</p></span>}
             </div>
             <div class="text-white hidden lg:block">
-                <div class="hover:scale-90 cursor-pointer p-3" onClick$={()=>state.openSearch = !state.openSearch}><BsPersonAdd font-size={32} /> </div>
+                <div class="hover:scale-90 cursor-pointer p-3" ><BsPersonAdd font-size={20} /> </div>
             </div>
         </div>
         {globalState.openCart && <Cart />}
