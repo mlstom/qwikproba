@@ -4,6 +4,7 @@ import Image from "~/images/logo-white-text.png"
 import { LinkComp } from './hovercomponents/linkComp';
 import { Cart } from '../cart/cart';
 import { MyState } from '~/routes/layout';
+import { BsBag, BsPersonAdd, BsSearch } from '@qwikest/icons/bootstrap';
 
 export const Header = component$(() => {
     const linkNiz = [
@@ -25,20 +26,19 @@ export const Header = component$(() => {
             {linkNiz.map((linkEl, ind) => <LinkComp linkEl={linkEl} key={ind} />)}
         </div>
         <div class="lg:hidden flex justify-center items-center text-white ">
-            L
             <div class="overflow-hidden"> <img class="hover:scale-90" src={Image} height={100} width={100}  /> </div>
         </div>
         <div class="flex items-center space-x-4">
             <div class="text-white  flex items-center">
                 {state.openSearch && <input type='text' />}
-                <div class="hover:scale-90 cursor-pointer p-3" onClick$={()=>state.openSearch = !state.openSearch}>S</div>
+                <div class="hover:scale-90 cursor-pointer p-3" onClick$={()=>state.openSearch = !state.openSearch}><BsSearch font-size={32} /></div>
             </div>
             <div  class="text-white relative p-3">
-            <div class="hover:scale-90 cursor-pointer " onClick$={()=>globalState.openCart = !globalState.openCart}>B</div>
+            <div class="hover:scale-90 cursor-pointer " onClick$={()=>globalState.openCart = !globalState.openCart}><BsBag font-size={32} /></div>
                 {cartItemsLength>0 &&  <span class="absolute top-0 right-0 bg-[#EE6D9F] rounded-full w-4 h-4 flex justify-center items-center p-2"><p>1</p></span>}
             </div>
             <div class="text-white hidden lg:block">
-                <div class="hover:scale-90 cursor-pointer p-3" onClick$={()=>state.openSearch = !state.openSearch}>P</div>
+                <div class="hover:scale-90 cursor-pointer p-3" onClick$={()=>state.openSearch = !state.openSearch}><BsPersonAdd font-size={32} /> </div>
             </div>
         </div>
         {globalState.openCart && <Cart />}
