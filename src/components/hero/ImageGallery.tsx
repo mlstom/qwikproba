@@ -54,7 +54,7 @@ const ReactImageGallery = () => {
                             <p className="text-xl mb-12 text-white">{product.podNaslov}</p>
                             <div className="mt-8 mx-auto w-[80%] flex flex-wrap justify-center gap-4">
                                 <a
-                                    className="block w-full rounded border border-[#0D525A] bg-[#0D525A]  py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+                                    className="block w-full rounded border border-[#0D525A] bg-[#0D525A] px-12  py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
                                     href="#"
                                 >
                                     Kupi odmah
