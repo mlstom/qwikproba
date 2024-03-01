@@ -6,24 +6,84 @@
 @tailwind components;
 @tailwind utilities;
 
-*::-webkit-scrollbar{
+
+/* Ovo je ono sto ssam dodao ja ne savetuje se da se ovde radi ali neke stvari moras ovde  */
+*::-webkit-scrollbar {
     display: none;
+}
+
+
+.swiper-button-prev::after {
+    color: white;
+}
+
+.swiper-button-next::after {
+    color: white;
+}
+
+.swiper-pagination-bullet-active {
+    color: white;
+    background-color: white;
+}
+
+.mySwiper .swiper-pagination .swiper-pagination-bullet-active {
+    color: white;
+    background-color: white;
+}
+
+.custom-shape-divider-top-1709296053 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1709296053 svg {
+    position: relative;
+    display: block;
+    width: calc(102% + 1.3px);
+    height: 102px;
+}
+
+.custom-shape-divider-top-1709296053 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.custom-shape-divider-bottom-1709296511 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1709296511 svg {
+    position: relative;
+    display: block;
+    width: calc(102% + 1.3px);
+    height: 94px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1709296511 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top-1709296053 svg {
+        width: calc(102% + 1.3px);
+        height: 65px;
     }
-    
-    
-    .swiper-button-prev::after{
-        color: white;
+    .custom-shape-divider-bottom-1709296511 svg {
+        width: calc(102% + 1.3px);
+        height: 65px;
     }
-    
-    .swiper-button-next::after{
-        color: white;
-    }
-    .swiper-pagination-bullet-active{
-        color:white;
-        background-color: white;
-    }
-    
-    .mySwiper .swiper-pagination .swiper-pagination-bullet-active{
-        color:white;
-        background-color: white;
-    }
+}
+
