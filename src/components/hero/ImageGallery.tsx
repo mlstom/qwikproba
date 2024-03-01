@@ -48,13 +48,13 @@ const ReactImageGallery = () => {
                 className="mySwiper"
             >
                 {products.map((product, indx) => <SwiperSlide key={indx} className='relative w-[100vw]'>
-                    <div className='absolute z-10 w-full  max-w-screen-xl  px-4 py-32 lg:flex lg:h-screen lg:items-center'>
-                        <div className="container mx-auto md:ml-10 text-center max-w-[500px] min-w-[400px]">
+                    <div className='absolute z-10 w-full left-0  max-w-screen-xl py-32 lg:flex lg:h-screen lg:items-center'>
+                        <div className="container  md:ml-10 text-center max-w-[500px] min-w-[400px]">
                             <h1 className="text-5xl bg-gradient-to-r from-[#00A3C4] via-[#007F8E] to-[#0D525A] text-transparent bg-clip-text  font-medium mb-6">{product.naslov}</h1>
                             <p className="text-xl mb-12 text-white">{product.podNaslov}</p>
-                            <div className="mt-8 mx-auto w-[90%] flex flex-wrap justify-center gap-4">
+                            <div className="mt-8 mx-auto w-[80%] flex flex-wrap justify-center gap-4">
                                 <a
-                                    className="block w-full rounded border border-[#0D525A] bg-[#0D525A] px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+                                    className="block w-full rounded border border-[#0D525A] bg-[#0D525A]  py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
                                     href="#"
                                 >
                                     Kupi odmah
